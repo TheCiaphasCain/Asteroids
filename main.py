@@ -1,4 +1,5 @@
-import pygame
+import pygame 
+import sys
 from constants import *
 from player import Player
 from asteroid import Asteroid
@@ -24,7 +25,7 @@ def main():
     Player.containers = (updatable, drawable) #adds player object to both groups
 
 
-    space = AsteroidField()
+    Asteroid_field = AsteroidField()
 
     player = Player(x=SCREEN_WIDTH/2, y=SCREEN_HEIGHT/2)
     
@@ -37,7 +38,11 @@ def main():
         screen.fill("black")
         for sprite in drawable:
             sprite.draw(screen) #this sets the solid color of the gui window
-        updatable.update(dt) 
+        updatable.update(dt)
+        for asteroid_sprite in enemy:
+            if asteroid_sprite.collision(player) == True:
+                print("game over!")
+                sys.exit()
         pygame.display.flip() # this updates what pygame draws to the screen
         clock.tick(60) #clock sets the fps, in this case to 60
         dt = clock.tick(60)/1000 #this decouples the game physics from the rendering speed 
