@@ -1,0 +1,31 @@
+====== CREATE VIRTUAL ENVIRONMENT ======
+
+ use command : "python3 -m venv .venv"
+
+====== ACTIVATE VIRTUAL ENVIRONMENT ======
+
+ use command: "source .venv/bin/activate" from the top of the project file system.
+
+====== DEACTIVATE VIRTUAL ENVIRONMENT ======
+
+ use command: "deactivate" 
+
+====== CREATE DEPENDENCIES LIST ======
+
+ use command "pip freeze > requirements.txt"
+
+====== VIRTUAL ENVIRONMENT 101 ======
+
+By crreating a virtual environment that encompasses a coding project, you ensure that the environment
+
+is reproducible and isolated. this means that each project has its own seperate dependencies and 
+
+libraries and their versions. this prevents conflicts that can arise when different projects use
+
+different versions of the same thing.
+
+this makes project management easier, simplifies packaging, and makes it easy to manage dependencies.
+
+
+
+
